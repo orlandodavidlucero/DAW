@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css">
+<meta charset="utf-8">
+<title>Titulo</title>
+<script type="text/javascript" src="js"></script>
+
+</head>
+
+<body id="formulari">
+
+	<h1>Alta Nueva</h1>
+	<form onsubmit="return validar(this)" action="ir a" method="post">
+	<div id="formulario">
+		<fieldset>
+			<legend> Datos </legend>
+			//datos
+			<p> Nombre*: <input type="text" id="nombre"/></p>
+			
+			//lista desplegable
+			<p> Provincia*: </p>
+			<select name="Provincia">
+			<option value="">- Selecciona una Provincia -</option>
+			<option value="Barcelona">Barcelona</option>
+			</select>
+			
+			//caja de texto
+			<p> Como nos ha conocido?* <br/>
+				<textarea name="textarea" rows="10" cols="50"></textarea>
+			</p>
+			
+			//checkbox
+			<p> Categorias de interes:</p>
+			<p><input type="checkbox" id="musica">musica</p>
+			//other
+			<div id="checkbox">
+			Categorias de interés(Tipo de juegos)*:
+			</br>
+				<input type="checkbox" name="categoria" id="estrategia" onchange="habilitaDeshabilita(this)" />Estrategia</>
+				<input type="checkbox" name="categoria" id="arcade" onchange="habilitaDeshabilita(this)"/>Arcade</> 
+			</div>
+			
+		</fieldset>
+		<p>
+		<br/>
+			<input type="submit" value="Enviar"/>
+		<br/>
+			<input type="reset" />
+		</p>
+	</div>
+	</form>
+</body>
+</html>
